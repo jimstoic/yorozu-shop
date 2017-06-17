@@ -58,3 +58,4 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'devise'
 gem "rails-erd"
+gem 'payjp'
