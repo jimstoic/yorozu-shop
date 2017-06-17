@@ -1,13 +1,9 @@
 <%= form_with(model: item, local: true) do |form| %>
   <% if item.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
-
-      <ul>
+    <div class="alert alert-danger">
       <% item.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <div><%= message %></div>
       <% end %>
-      </ul>
     </div>
   <% end %>
 
@@ -32,7 +28,7 @@
   </div>
 
   <div class="text-right">
-    <%= link_to 'Back', items_path, class: 'btn btn-default' %>
+    <%= link_to 'キャンセル', items_path, class: 'btn btn-default' %>
     <%= form.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
